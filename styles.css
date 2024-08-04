@@ -92,4 +92,38 @@ footer {
     margin-top: 20px;
 }
 
+/* styles.css */
+#projects {
+    padding: 20px;
+}
 
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    max-width: 50%; /* Asegura que la imagen no exceda el 50% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción original */
+}
+
+/* Estilos para la flecha */
+.back-to-top {
+    position: fixed; /* Fija la posición en la pantalla */
+    bottom: 20px; /* Posición desde la parte inferior */
+    left: 20px; /* Posición desde la parte izquierda */
+    display: none; /* Inicialmente oculto */
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.back-to-top:hover {
+    background-color: #555; /* Cambio de color al pasar el ratón por encima */
+}
