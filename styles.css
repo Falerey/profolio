@@ -92,19 +92,7 @@ footer {
     margin-top: 20px;
 }
 
-/* styles.css */
-#projects {
-    padding: 20px;
-}
 
-.project {
-    margin-bottom: 20px;
-}
-
-.project img {
-    max-width: 50%; /* Asegura que la imagen no exceda el 50% del ancho del contenedor */
-    height: auto; /* Mantiene la proporción original */
-}
 
 /* Estilos para la flecha */
 .back-to-top {
