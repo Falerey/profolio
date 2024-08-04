@@ -19,6 +19,26 @@
             height: auto; /* Mantiene la proporción original */
             border: 2px solid red; /* Añade un borde para visualizar el tamaño de la imagen */
         }
+        .back-to-top {
+            position: fixed; /* Fija la posición en la pantalla */
+            bottom: 20px; /* Posición desde la parte inferior */
+            right: 20px; /* Posición desde la parte derecha */
+            display: none; /* Inicialmente oculto */
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        }
+
+        .back-to-top:hover {
+            background-color: #555; /* Cambio de color al pasar el ratón por encima */
+        }
     </style>
 </head>
 <body>
@@ -52,6 +72,25 @@
     </section>
     
 
-    <script src="script.js"></script>
+     <div class="back-to-top" id="backToTop">&#8679;</div>
+
+    <script>
+        // JavaScript para mostrar/ocultar la flecha y desplazarse hacia arriba
+        window.addEventListener('scroll', function() {
+            var backToTopButton = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
