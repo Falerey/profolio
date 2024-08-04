@@ -18,7 +18,28 @@
             </ul>
         </nav>
     </header>
-    
+    <style>
+        .back-to-top {
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            display: none; 
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #555; 
+        }
+    </style>
     <section id="about">
         <h2>¿Qué son las impresiones 3D?</h2>
         <p>Las impresiones 3D son una forma de traer a la realidad modelos 3D de tu computadora</p>
@@ -27,7 +48,31 @@
     <section id="FAQ">
         <h2>¿Qué puedo imprimir?</h2>
         <p>El campo de las impresiones 3D es muy amplio, puede llegar a ser desde cosas como una simple decoracion, juguetes y hasta herramientas. haz <a href="https://falerey.github.io/profolio/projects.html">click aqui</a> para ver ejemplos</p>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="contact">
+        <h3>para más informacion mandame un mensaje via whatsapp a este numero 33 3243 4233</h3>
+    </section>
+    
+     <div class="back-to-top" id="backToTop">&#8679;</div>
+
+    <script>
+        // JavaScript para mostrar/ocultar la flecha y desplazarse hacia arriba
+        window.addEventListener('scroll', function() {
+            var backToTopButton = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
